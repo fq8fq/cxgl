@@ -9,7 +9,7 @@
 <form  method = "post" action="/login">
 <table>
 <tr>
-<td colspan = 2>登陆界面</td>
+<td colspan = 2>登陆界面1</td>
 </tr>
 <tr>
 <td>账号：</td>
