@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 指定工作空间，要与接口名相同，源代码没有去看，猜测应该是通过"这里的namespace.下边方法的id"来定位方法的 -->
+<mapper namespace="com.cx.mapper.UserMapper">
+    
+    <!-- 若不需要自动返回主键，将useGeneratedKeys="true" keyProperty="id"去掉即可(当然如果不需要自动返回主键，直接用注解即可) -->
+    <insert id="insertUserWithBackId" parameterType="User" useGeneratedKeys="true" keyProperty="id" >
+       <![CDATA[
+       INSERT INTO user 
+       (
+           username,
+           password
+       )
+       VALUES               
+       (
+           #{username, jdbcType=VARCHAR},
+           #{password, jdbcType=VARCHAR}
+       )
+       ]]>
+   </insert>
+   
+   <select id="login" resultType="int" >
+       select count(*) from user  where username=#{username} and password=#{password} 
+   </select>
+   
+   <resultMap type="com.cx.entity.Priv" id="PrivVo" autoMapping="true">  
+        <id property="id" column="id"/>  
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>   
+    </resultMap> 
+  
+    <select id="findUserPriv" resultMap="PrivVo">  
+       select `user`.id as userId,`user`.username as userName,priv.id as privId ,priv.privName as privName,priv.url as url from user,role,user_role,priv,role_priv where `user`.id=user_role.userid and role.id=user_role.roleid and role.id=role_priv.roleid and priv.id= role_priv.privid 
+    </select>  
+    
+</mapper>
