@@ -23,15 +23,18 @@
    <select id="login" resultType="int" >
        select count(*) from user  where username=#{username} and password=#{password} 
    </select>
-   
+
+
    <resultMap type="com.cx.entity.Priv" id="PrivVo" autoMapping="true">  
-        <id property="id" column="id"/>  
-        <result property="username" column="username"/>
-        <result property="password" column="password"/>   
+        <result property="userId" column="userId"/>  
+        <result property="userName" column="userName"/>
+        <result property="privId" column="privId"/> 
+        <result property="privName" column="privName"/>   
+        <result property="url" column="url"/>     
     </resultMap> 
   
     <select id="findUserPriv" resultMap="PrivVo">  
-       select `user`.id as userId,`user`.username as userName,priv.id as privId ,priv.privName as privName,priv.url as url from user,role,user_role,priv,role_priv where `user`.id=user_role.userid and role.id=user_role.roleid and role.id=role_priv.roleid and priv.id= role_priv.privid 
-    </select>  
+       select `user`.id as userId,`user`.username as userName,priv.id as privId ,priv.privName as privName,priv.url as url from user,role,user_role,priv,role_priv where `user`.id=user_role.userid and role.id=user_role.roleid and role.id=role_priv.roleid and priv.id= role_priv.privid and user.username=#{username} 
+   </select>
     
 </mapper>

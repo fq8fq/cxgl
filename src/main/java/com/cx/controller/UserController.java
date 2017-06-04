@@ -1,5 +1,7 @@
 package  com.cx.controller;
 
+
+import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
@@ -33,14 +35,14 @@ public class UserController {
        return "hello";
     }
     
-    @RequestMapping(value="/login",method=RequestMethod.POST)
+    @RequestMapping(value="/login"/*,method=RequestMethod.POST*/)
     public String login(@RequestParam("username") String username, 
                            @RequestParam("password") String password,Map<String,Object> map){
     	
     	boolean isLoginSucc = userService.login(username,password);
     	if(isLoginSucc){
-    		Priv priv = userService.priv(username);
-    		map.put("priv", priv);
+    		List<Priv> list = userService.priv(username);
+    		map.put("privs", list);
     		
     		return "main";
     		

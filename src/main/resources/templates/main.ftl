@@ -21,9 +21,9 @@
   
   <body>
    <ul class="nav nav-pills">
-       <li role="presentation" class="active"><a href="#">Home</a></li>
-       <li role="presentation"><a href="#">Profile</a></li>
-       <li role="presentation"><a href="#">Messages</a></li>
+        <#list privs as priv>
+          <li role="presentation" >  <a href="${priv.url}">${priv.privName}</a></li>
+        </#list>
    </ul>
    <!--<ul>
        <#list animals as animal>

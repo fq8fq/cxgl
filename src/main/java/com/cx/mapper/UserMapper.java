@@ -19,6 +19,6 @@ public interface UserMapper {
 */
    public int insertUserWithBackId(User user);
    public int login(@Param("username")String username ,@Param("password")String password);
-   public List<Priv> findUserPriv(@Param("userid") int username);
+   public List<Priv> findUserPriv(@Param("username") String username);
 }
 

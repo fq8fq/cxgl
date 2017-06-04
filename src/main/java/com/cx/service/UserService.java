@@ -1,5 +1,7 @@
 package com.cx.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,9 +36,9 @@ public class UserService {
     	}
     }
 
-	public Priv priv(String username) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Priv> priv(String username) {
+		return userDao.priv(username);
+		 
 	}
     
 }
