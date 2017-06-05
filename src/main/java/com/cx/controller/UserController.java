@@ -25,7 +25,7 @@ public class UserController {
     
     @RequestMapping("/")
     public String home() {
-    
+      System.out.println("in ...");
       return "login";
     }
     

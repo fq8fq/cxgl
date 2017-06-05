@@ -25,11 +25,7 @@
           <li role="presentation" >  <a href="${priv.url}">${priv.privName}</a></li>
         </#list>
    </ul>
-   <!--<ul>
-       <#list animals as animal>
-          <li>${animal.name} for ${animal.price} Euros
-      </#list>
-  </ul>-->
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed
