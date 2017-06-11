@@ -142,12 +142,12 @@
 		                    <form method = "post" action="/login" class="form-horizontal"style:padding:5px;>
 		                        <span class="heading">内蒙古邮政车险客户管理系统</span>
 		                        <div class="form-group">
-		                            用户名：<input type="text" name="username" class="form-control" id="inputEmail3" placeholder="请输入用户名" >
+		                            用户名：<input type="text" name="username" class="form-control" placeholder="请输入用户名" >
 		                            <i class="fa fa-user"></i>
 		                        </div>
 		                        <div class="form-group help">
 								
-		                            密    码：<input type="password" name="password" class="form-control" id="inputPassword3" placeholder="请输入密码">
+		                            密    码：<input type="password" name="password" class="form-control" placeholder="请输入密码">
 		                            <i class="fa fa-lock"></i>
 		                            <a href="#" class="fa fa-question-circle"></a>
 		                        </div>
@@ -156,8 +156,7 @@
 		                                <input type="checkbox" value="None" id="checkbox1" name="check"/>
 		                                <label for="checkbox1"></label>
 		                            </div>
-
-		                            <span class="text">Remember me</span>
+		                            <span class="text">记住我</span>
 		                            <input type = "submit" value = "登录" class="btn btn-default" style:margin:5px;></input>
 		                        </div>
 		                    </form>
@@ -165,6 +164,8 @@
 		            </div>
 		        </div>
 		    </div>
+		    
+		  
 		   
 </body>
 </html>
