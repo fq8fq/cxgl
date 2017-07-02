@@ -290,7 +290,7 @@
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>统计报表<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="JTTable.ftl">集团报表</a>
+                                    <a href="/report/sell">集团报表</a>
                                 </li>
                                 <li>
                                     <a href="#">盟市销售情况统计</a>

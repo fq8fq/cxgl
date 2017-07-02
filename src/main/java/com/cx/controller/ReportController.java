@@ -27,8 +27,8 @@ public class ReportController {
 	    	List<ReportSell> list = reportSellService.reportSell();    
 	    	map.put("report", list);
 	    		System.out.println("in reprotsell");
-	    		return "reportSell";
-	    	
+	    		//return "reportSell";
+	    		return "JTTable";
 	    	/*map.put("name", "libai");
 	    	return "hello";*/
 	    	
