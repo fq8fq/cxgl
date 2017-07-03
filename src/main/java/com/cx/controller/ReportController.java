@@ -30,8 +30,7 @@ public class ReportController {
 	    		//return "reportSell";
 	    		return "JTTable";
 	    	/*map.put("name", "libai");
-	    	return "hello";*/
-	    	
+	    	return "hello";*/	    	
 	    }
 	
 }
